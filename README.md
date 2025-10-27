@@ -32,3 +32,39 @@ Explorar la creación de nuevos patrones para los marcadores.
 7. 💡 Desafíos opcionales
 Agregar efectos de sonido o animaciones al encontrar pistas.
 Implementar contador de tiempo o progreso del jugador.
+
+## 🛠 Cómo probar el juego paso a paso
+
+1. Inicia un servidor local en `8080` (por ejemplo `python3 -m http.server 8080`).
+2. En otra terminal, arranca el proxy HTTPS con la versión incluida en este repositorio:  
+   `node node_modules/local-ssl-proxy/build/main.js --source 8443 --target 8080 --hostname 0.0.0.0`
+3. Desde el celular (misma red), abrí `https://<ip-de-tu-mac>:8443` y aceptá el certificado inseguro. Una vez que cargue la cámara, ya puedes escanear los marcadores.
+4. Cada vez que encuentres un marcador, el HUD marcará el progreso; al completar los tres, se mostrará el mensaje final y sonará la animación de cierre.
+
+> Si el proxy no arranca y aparece `EADDRINUSE`, cerrá cualquier instancia previa con `Ctrl+C` y volvé a ejecutar el comando.
+
+## 🖨 Marcadores listos para imprimir
+
+Imprimí los siguientes marcadores en tamaño A4 o mostrálos en pantalla. Funcionan con la configuración actual (`type="pattern"` para el marcador inicial personalizado y `type="barcode"` para los otros dos):
+
+- **Marcador Inicial – Foto patrón personalizada**  
+  ![Marcador personalizado](makers/pattern-photo.png)
+
+- **Marcador del Patio – Barcode 5**  
+  ![Marcador Barcode 5](https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/examples/marker-training/examples/markers/barcode_5.png)
+
+- **Marcador de la Torre – Barcode 8**  
+  ![Marcador Barcode 8](https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/examples/marker-training/examples/markers/barcode_8.png)
+
+> Tip: si los enlaces fallan temporalmente por límites de GitHub, descargalos desde el CDN (`https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/...`) o usá el generador oficial de AR.js (`https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html`).
+
+## 🚀 Publicar el proyecto en GitHub Pages
+
+Este repositorio ya incluye un workflow (`.github/workflows/deploy.yml`) que envía automáticamente el contenido estático a GitHub Pages cada vez que se hace push a `main`. Solo resta activarlo desde la configuración del repo:
+
+1. Entrá a **Settings → Pages**.
+2. En **Build and deployment → Source**, elegí **GitHub Actions**. Guardá los cambios.
+3. Hacé push a `main` (`git push origin main`). El workflow `Deploy to GitHub Pages` se dispara y publica el sitio.
+4. Cuando finalice, GitHub mostrará la URL pública (algo como `https://<usuario>.github.io/<repo>/`). Compartí ese enlace para que cualquiera pueda probar la experiencia AR sin necesidad de tu server local.
+
+> Nota: asegurate de commitear solo los archivos necesarios (`index.html`, carpeta `makers/`, etc.). La carpeta `node_modules/` está ignorada para que el despliegue siga siendo liviano.
