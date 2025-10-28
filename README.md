@@ -35,9 +35,9 @@ Implementar contador de tiempo o progreso del jugador.
 
 ## 🛠 Cómo probar el juego paso a paso
 
-1. Inicia un servidor local en `8080` (por ejemplo `python3 -m http.server 8080`).
-2. En otra terminal, arranca el proxy HTTPS con la versión incluida en este repositorio:  
-   `node node_modules/local-ssl-proxy/build/main.js --source 8443 --target 8080 --hostname 0.0.0.0`
+1. Inicia un servidor local en `8080` (por ejemplo `python3 -m http.server 8080` o `npx http-server . -p 8080`).
+2. En otra terminal, arranca el proxy HTTPS con:  
+   `npx local-ssl-proxy --source 8443 --target 8080 --hostname 0.0.0.0`
 3. Desde el celular (misma red), abrí `https://<ip-de-tu-mac>:8443` y aceptá el certificado inseguro. Una vez que cargue la cámara, ya puedes escanear los marcadores.
 4. Cada vez que encuentres un marcador, el HUD marcará el progreso; al completar los tres, se mostrará el mensaje final y sonará la animación de cierre.
 
