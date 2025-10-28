@@ -45,18 +45,18 @@ Implementar contador de tiempo o progreso del jugador.
 
 ## 🖨 Marcadores listos para imprimir
 
-Imprimí los siguientes marcadores en tamaño A4 o mostrálos en pantalla. Funcionan con la configuración actual (`type="pattern"` para el marcador inicial personalizado y `type="barcode"` para los otros dos):
+Imprimí los siguientes marcadores en tamaño A4 o mostrálos en pantalla. Todos están configurados como `type="pattern"` y viven en la carpeta `makers/`:
 
 - **Marcador Inicial – Foto patrón personalizada**  
   ![Marcador personalizado](makers/pattern-photo.png)
 
-- **Marcador del Patio – Barcode 5**  
-  ![Marcador Barcode 5](https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/examples/marker-training/examples/markers/barcode_5.png)
+- **Marcador León – Guardian felino**  
+  ![Marcador León](makers/leon.png)
 
-- **Marcador de la Torre – Barcode 8**  
-  ![Marcador Barcode 8](https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/examples/marker-training/examples/markers/barcode_8.png)
+- **Marcador Tesoro – Cofre final**  
+  ![Marcador Tesoro](makers/tesoro.png)
 
-> Tip: si los enlaces fallan temporalmente por límites de GitHub, descargalos desde el CDN (`https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/...`) o usá el generador oficial de AR.js (`https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html`).
+> Tip: si necesitás recalibrar un patrón, podés abrir el generador oficial de AR.js (`https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html`), cargar la imagen y exportar un nuevo `.patt`.
 
 ## 🚀 Publicar el proyecto en GitHub Pages
 

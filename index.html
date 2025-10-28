@@ -190,7 +190,7 @@
       </li>
       <li id="status-torre" data-status="pending">
         <span class="badge">3</span>
-        Marcador de la Torre · Estas cerca!! solo te falta el ...
+        Marcador de la Torre · ¡Estás cerca! Falta el tesoro
       </li>
     </ul>
   </div>
@@ -237,7 +237,10 @@
       </a-entity>
     </a-marker>
 
-    <a-marker id="marker-patio" type="barcode" value="5">
+    <a-marker
+      id="marker-patio"
+      type="pattern"
+      url="makers/pattern-leon">
       <a-entity position="0 0.8 0">
         <a-entity rotation="-90 0 0">
           <a-torus-knot
@@ -250,7 +253,7 @@
             animation="property: rotation; to: 360 360 0; loop: true; dur: 9000; easing: linear">
           </a-torus-knot>
           <a-text
-            value="Pista del patio:\nSuma las iniciales\nS + C + ?"
+            value="Guardian felino:\nAdivina su rugido\n¿Es Leon o León?"
             width="2"
             align="center"
             position="0 0.75 0"
@@ -260,7 +263,10 @@
       </a-entity>
     </a-marker>
 
-    <a-marker id="marker-torre" type="barcode" value="8">
+    <a-marker
+      id="marker-torre"
+      type="pattern"
+      url="makers/pattern-tesoro">
       <a-entity position="0 1 0">
         <a-entity rotation="-90 0 0">
           <a-entity
@@ -278,7 +284,7 @@
             animation="property: material.opacity; dir: alternate; loop: true; to: 0.35; dur: 1600">
           </a-ring>
           <a-text
-            value="La llave del tesoro\nLa suma es 9"
+            value="¡Encontraste el tesoro!\nDi el valor secreto: 9"
             width="1.9"
             align="center"
             position="0 0.95 0"
@@ -369,8 +375,7 @@
     }
 
     // Mostrar sugerencias en la consola para la experiencia.
-    console.info("Tesoro AR listo. Usa el marcador personalizado del folder makers y los barcodes 5 y 8 de AR.js.");
-    console.info("Puedes generar los barcodes en: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html");
+    console.info("Tesoro AR listo. Usa los patrones personalizados en makers (photo, leon y tesoro).");
   </script>
 </body>
 </html>
