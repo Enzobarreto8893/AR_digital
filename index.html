@@ -216,66 +216,75 @@
       id="marker-intro"
       type="pattern"
       url="makers/pattern-photo-1523626752472-b55a628f1acc.patt">
-      <a-entity position="0 0.5 0" rotation="-90 0 0">
-        <a-text
-          value="Bienvenidos a la expedición.\nEncuentren los símbolos ocultos."
-          width="2.5"
-          align="center"
-          color="#ffeeaa">
-        </a-text>
-        <a-box
-          position="0 -0.6 0"
-          depth="0.2"
-          height="0.2"
-          width="0.8"
-          color="#ff7a69"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
-        </a-box>
+      <a-entity position="0 0.5 0">
+        <a-entity rotation="-90 0 0">
+          <a-text
+            value="Bienvenidos a la expedición.\nEncuentren los símbolos ocultos."
+            width="2.5"
+            align="center"
+            color="#ffeeaa"
+            position="0 0.6 0">
+          </a-text>
+          <a-box
+            position="0 -0.4 0"
+            depth="0.2"
+            height="0.2"
+            width="0.8"
+            color="#ff7a69"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear">
+          </a-box>
+        </a-entity>
       </a-entity>
     </a-marker>
 
     <a-marker id="marker-patio" type="barcode" value="5">
-      <a-entity position="0 0.8 0" rotation="-90 0 0">
-        <a-torus-knot
-          color="#6ec8ff"
-          radius="0.45"
-          radius-tubular="0.12"
-          p="2"
-          q="3"
-          animation="property: rotation; to: 360 360 0; loop: true; dur: 9000; easing: linear">
-        </a-torus-knot>
-        <a-text
-          value="Pista del patio:\nSuma las iniciales\nS + C + ?"
-          width="2"
-          align="center"
-          position="0 -0.9 0"
-          color="#d4f0ff">
-        </a-text>
+      <a-entity position="0 0.8 0">
+        <a-entity rotation="-90 0 0">
+          <a-torus-knot
+            position="0 0.45 0"
+            color="#6ec8ff"
+            radius="0.45"
+            radius-tubular="0.12"
+            p="2"
+            q="3"
+            animation="property: rotation; to: 360 360 0; loop: true; dur: 9000; easing: linear">
+          </a-torus-knot>
+          <a-text
+            value="Pista del patio:\nSuma las iniciales\nS + C + ?"
+            width="2"
+            align="center"
+            position="0 0.75 0"
+            color="#d4f0ff">
+          </a-text>
+        </a-entity>
       </a-entity>
     </a-marker>
 
     <a-marker id="marker-torre" type="barcode" value="8">
-      <a-entity position="0 1 0" rotation="-90 0 0">
-        <a-entity
-          gltf-model="#key-model"
-          scale="0.18 0.18 0.18"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear">
+      <a-entity position="0 1 0">
+        <a-entity rotation="-90 0 0">
+          <a-entity
+            gltf-model="#key-model"
+            scale="0.18 0.18 0.18"
+            position="0 0.55 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear">
+          </a-entity>
+          <a-ring
+            position="0 0.4 0"
+            rotation="0 0 0"
+            radius-inner="0.45"
+            radius-outer="0.55"
+            color="#ffdd55"
+            animation="property: material.opacity; dir: alternate; loop: true; to: 0.35; dur: 1600">
+          </a-ring>
+          <a-text
+            value="La llave del tesoro\nLa suma es 9"
+            width="1.9"
+            align="center"
+            position="0 0.95 0"
+            color="#fff1c1">
+          </a-text>
         </a-entity>
-        <a-ring
-          position="0 -0.05 0"
-          rotation="-90 0 0"
-          radius-inner="0.45"
-          radius-outer="0.55"
-          color="#ffdd55"
-          animation="property: material.opacity; dir: alternate; loop: true; to: 0.35; dur: 1600">
-        </a-ring>
-        <a-text
-          value="La llave del tesoro\nLa suma es 9"
-          width="1.9"
-          align="center"
-          position="0 -1.15 0"
-          color="#fff1c1">
-        </a-text>
       </a-entity>
     </a-marker>
 
